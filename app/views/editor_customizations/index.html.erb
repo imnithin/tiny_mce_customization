@@ -4,27 +4,59 @@ tinymce.init({
 	selector: "textarea",
 	fontsize_formats: "6pt 7pt 8pt 9pt 10pt 11pt 12pt 26pt 36pt",
 	setup: function(editor) {
-		editor.addButton('report_design', {
+		editor.addButton('menu_button', {
 			type: 'menubutton',
-			text: 'Variables',
+			text: 'Menu Button',
 			icon: false,
 			menu: [
+			{text:'Basic Information', menu:[<% for data in @basic_data %>{text:'<%= " #{t(data)}" %>', onclick: function() {editor.insertContent('<i>$%<%= data %>\%</i>');}},<% end %>]},
+
+			{text:'Additional Data', menu:[<% for data in @addt_data %>{text:'<%= " #{t(data)}" %>', onclick: function() {<%if data != "gender"%>editor.insertContent('<i>$%<%= data %>\%</i>');<%else%>
+                      editor.windowManager.open({
+                        title: 'Parent Category',
+                        width : 270,
+                        height : 70,
+                        body: [
+                          {type: 'listbox',
+                            
+                            label: 'Select :',
+                            onselect: function(e) {
+   // write a remote function and save the value in session 
+                            },
+                            values: [
+                              {text: 'Select', value: 'select' },
+                            <% for category in @sexual_identities %>
+                                {text: '<%= category %>', value: '<%= category %>'},
+     						 <% end %>
+
+                            ],
+                            onPostRender: function() {
+                              // Select the item    						
+                              this.value('<%=@sexual_identities.first%>');
+                            }
+                           
+                          }
+                        ]
+                      });
+<% end %>}},<% end %>]},
 			]
 		});
 	},
 
 	plugins: [
-	"image fullpage advlist autolink lists charmap print preview anchor",
+	"link image fullpage advlist autolink lists charmap print preview anchor",
 	"searchreplace visualblocks code fullscreen",
 	"insertdatetime table contextmenu paste ",
 	"emoticons print textcolor"
 	],
-	toolbar: "image fullpage | undo redo | fontsizeselect | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | forecolor backcolor | report_design "
+	toolbar: "link image fullpage | undo redo | fontsizeselect | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | forecolor backcolor | menu_button "
 });
+//plugins : media image moxiemanager
+// toolbar : insertfile image
 </script>
 
 <%= form_tag editor_customizations_pdf_path do %>
 <%= text_area_tag :description %>
-<%= submit_tag "Submit" %>
+<%#= submit_tag "Submit" %>
 <% end %>
 

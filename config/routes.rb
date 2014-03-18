@@ -15,13 +15,12 @@ TinyMceCustomization::Application.routes.draw do
   #   resources :products
 
   # Example resource route with options:
-    resources :editor_customizations do
-      member do
-        
-      end
+  resources :editor_customizations do
+    member do
+      
     end
-
-    patch '/editor_customizations/pdf' => 'editor_customizations#pdf', :as => 'editor_customizations/pdf'
+  end
+  patch '/editor_customizations/pdf' => 'editor_customizations#pdf', :as => 'editor_customizations/pdf'
   #
   #     collection do
   #       get 'sold'
