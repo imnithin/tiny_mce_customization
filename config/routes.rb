@@ -20,6 +20,7 @@ TinyMceCustomization::Application.routes.draw do
       
     end
   end
+  patch '/editor_customizations/image_upload' => 'editor_customizations#image_upload', :as => 'editor_customizations/image_upload'
   patch '/editor_customizations/pdf' => 'editor_customizations#pdf', :as => 'editor_customizations/pdf'
   #
   #     collection do
