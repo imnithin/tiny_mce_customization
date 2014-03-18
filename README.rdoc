@@ -1,3 +1,5 @@
+Had started to blog initially http://imnithin.weebly.com/ and now getting it onto Git.
+
 Please feel free to pull and customize tinymce editor version 4, on Rails 4.
 
 As I have played around with TinyMce editor for my previous project, I would like to share things I did, Afterall sharing is caring hahaha :)
