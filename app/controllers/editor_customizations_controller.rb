@@ -10,13 +10,19 @@ class EditorCustomizationsController < ApplicationController
 		
 	end
 
-	def image_upload
-		if params[:upload].present?
-			file = params[:upload][:datafile]
-			File.open(Rails.root.join('assets', 'images', file.original_filename), 'wb') do |f|
-				f.write(file.read)
-			end
-		end
-		redirect_to :action => "index"
+	def images
 	end
+	
+	def show
+	end
+
+	# def image_upload
+	# 	if params[:upload].present?
+	# 		file = params[:upload][:datafile]
+	# 		File.open(Rails.root.join('assets', 'images', file.original_filename), 'wb') do |f|
+	# 			f.write(file.read)
+	# 		end
+	# 	end
+	# 	redirect_to :action => "index"
+	# end
 end

@@ -17,11 +17,14 @@ TinyMceCustomization::Application.routes.draw do
   # Example resource route with options:
   resources :editor_customizations do
     member do
-      
+    get 'images' => 'editor_customizations#images'
     end
   end
-  patch '/editor_customizations/image_upload' => 'editor_customizations#image_upload', :as => 'editor_customizations/image_upload'
-  patch '/editor_customizations/pdf' => 'editor_customizations#pdf', :as => 'editor_customizations/pdf'
+
+  match 'editor_customizations/pdf' => 'editor_customizations#pdf', :via => :get
+  # match 'editor_customizations/images' => 'editor_customizations#images', :via => :get
+  
+
   #
   #     collection do
   #       get 'sold'
