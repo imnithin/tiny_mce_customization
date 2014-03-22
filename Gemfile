@@ -44,3 +44,4 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'i18n'
+gem 'tinymce-rails-imageupload', github: 'PerfectlyNormal/tinymce-rails-imageupload'

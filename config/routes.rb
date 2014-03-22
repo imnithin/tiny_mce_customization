@@ -18,9 +18,10 @@ TinyMceCustomization::Application.routes.draw do
   resources :editor_customizations do
     member do
     get 'images' => 'editor_customizations#images'
+
     end
   end
-
+match '/tinymce_assets' => 'editor_customizations#create', :via => :post
   match 'editor_customizations/pdf' => 'editor_customizations#pdf', :via => :get
   # match 'editor_customizations/images' => 'editor_customizations#images', :via => :get
   

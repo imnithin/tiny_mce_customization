@@ -6,23 +6,28 @@ class EditorCustomizationsController < ApplicationController
 		@sexual_identities = %w{Male Female}
 	end
 
-	def pdf
-		
+	def create
+		if params[:file].present?
+			file = params[:file]
+			File.open(Rails.root.join('app','assets', 'images', params[:file].original_filename), 'wb') do |f|
+				f.write(file.read)
+			end
+		end
+		image="/assets/#{params[:file].original_filename}"
+		 render json: {
+      image: {
+        url: view_context.image_url(image)
+      }
+    }, content_type: "text/html"
+  
 	end
+
 
 	def images
 	end
-	
+
 	def show
 	end
 
-	# def image_upload
-	# 	if params[:upload].present?
-	# 		file = params[:upload][:datafile]
-	# 		File.open(Rails.root.join('assets', 'images', file.original_filename), 'wb') do |f|
-	# 			f.write(file.read)
-	# 		end
-	# 	end
-	# 	redirect_to :action => "index"
-	# end
+
 end

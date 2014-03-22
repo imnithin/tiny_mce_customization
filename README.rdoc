@@ -2,8 +2,8 @@ Had started to blog initially http://imnithin.weebly.com/ and now getting it ont
 
 Please feel free to pull and customize tinymce editor version 4, on Rails 4.
 
-As I have played around with TinyMce editor for my previous project, I would like to share things I did, Afterall sharing is caring hahaha :)
+As I have played around with TinyMce editor for my previous project, I would like to share things I did, Afterall sharing is caring ;)
 
-I have added Menu button, menu items that has sub-menu items, a list box in it. 
+I have added Menu button, menu items that has sub-menu items, a list box as well, and Radio buttons are not supported in TinyMce. 
 
-I will be adding simple image upload and usage in editor as well(using a browser window)
+Image Upload and usage using https://github.com/PerfectlyNormal/tinymce-rails-imageupload thanks a ton to PerfectlyNormal!
