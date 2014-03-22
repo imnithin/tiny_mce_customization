@@ -44,7 +44,7 @@ tinymce.init({
 	},
 
 	plugins: [
-	"uploadimage link image fullpage advlist autolink lists charmap print preview anchor",
+	"hr uploadimage link image fullpage advlist autolink lists charmap print preview anchor",
 	"searchreplace visualblocks code fullscreen",
 	"insertdatetime table contextmenu paste ",
 	"emoticons print textcolor"
@@ -55,8 +55,7 @@ tinymce.init({
 // toolbar : insertfile image
 </script>
 
-<%= form_tag editor_customizations_pdf_path do %>
+<%= form_tag save_editor_customizations_path do %>
 <%= text_area_tag :description %>
 <%#= submit_tag "Submit" %>
 <% end %>
-

@@ -9,25 +9,39 @@ class EditorCustomizationsController < ApplicationController
 	def create
 		if params[:file].present?
 			file = params[:file]
-			File.open(Rails.root.join('app','assets', 'images', params[:file].original_filename), 'wb') do |f|
+			save_image(file)
+			image="/assets/#{file.original_filename}"
+			render json: {
+				image: {
+					url: view_context.image_url(image)
+				}
+				}, content_type: "text/html"
+			else
+				redirect_to :action=>"index"
+			end
+		end
+
+		def upload_image
+			if params[:file].present?
+				file = params[:file][:datafile]
+				save_image(file)
+			end
+			redirect_to :action=>"images"
+		end
+
+		private
+
+		def save_image(file)
+			File.open(Rails.root.join('app','assets', 'images', file.original_filename), 'wb') do |f|
 				f.write(file.read)
 			end
 		end
-		image="/assets/#{params[:file].original_filename}"
-		 render json: {
-      image: {
-        url: view_context.image_url(image)
-      }
-    }, content_type: "text/html"
-  
+
+		def show
+		end
+		
+		def delete_image
+
+		end
+
 	end
-
-
-	def images
-	end
-
-	def show
-	end
-
-
-end

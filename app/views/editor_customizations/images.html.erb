@@ -1,1 +1,16 @@
-images
+<%= javascript_include_tag "lmcbutton"%>
+
+<h4>Upload Image.</h4>
+<%= form_tag('/editor_customizations/upload_image', :multipart=> true) do %>
+  <%= file_field 'file', 'datafile' %>
+  <%= submit_tag "Upload" %>
+<% end %>
+<h4>Select Image.</h4>
+<% @images = Dir.glob("app/assets/images/*") %>
+<% @images.each_with_index do |image_path| %>
+&nbsp;&nbsp;&nbsp;<%= image_tag "#{image_path.split('/').last}", :size => "75x75" %>
+ <% loc = image_path.split("/") %>
+ <% path = loc[1] + "/" + loc[3]%>
+  <script type="text/javascript"> ShowLMCButton('<%="/"+path %>', 'Copy!','close_window()','/lmcbutton.swf');</script>
+  <%#= link_to 'delete', delete_image_editor_customization_path(:id=>image_path) %>
+<% end %>

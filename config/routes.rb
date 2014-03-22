@@ -16,14 +16,16 @@ TinyMceCustomization::Application.routes.draw do
 
   # Example resource route with options:
   resources :editor_customizations do
+    collection do
+      get 'images'
+      get 'save'
+      post 'upload_image'
+    end
     member do
-    get 'images' => 'editor_customizations#images'
-
+      delete 'delete_image'
     end
   end
-match '/tinymce_assets' => 'editor_customizations#create', :via => :post
-  match 'editor_customizations/pdf' => 'editor_customizations#pdf', :via => :get
-  # match 'editor_customizations/images' => 'editor_customizations#images', :via => :get
+  match '/tinymce_assets' => 'editor_customizations#create', :via => :post
   
 
   #
