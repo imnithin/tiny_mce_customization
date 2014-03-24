@@ -40,7 +40,7 @@
  		img.src = url;
  	}
  	function openMyFileManager() {
- 		window.open('images','','width=450,height=540 ,toolbar=no,status=no,menubar=no,scrollbars=yes,resizable=no');
+ 		window.open('/editor_customizations/images','','width=450,height=540 ,toolbar=no,status=no,menubar=no,scrollbars=yes,resizable=no');
  	}
  	function createImageList(callback) {
  		return function() {

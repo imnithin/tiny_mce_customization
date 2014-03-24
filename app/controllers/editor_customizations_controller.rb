@@ -29,6 +29,13 @@ class EditorCustomizationsController < ApplicationController
 			redirect_to :action=>"images"
 		end
 
+		def show
+		end
+		
+		def delete_image
+
+		end
+
 		private
 
 		def save_image(file)
@@ -37,11 +44,5 @@ class EditorCustomizationsController < ApplicationController
 			end
 		end
 
-		def show
-		end
-		
-		def delete_image
-
-		end
 
 	end
