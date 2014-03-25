@@ -29,11 +29,10 @@ class EditorCustomizationsController < ApplicationController
 			redirect_to :action=>"images"
 		end
 
-		def show
-		end
 		
 		def delete_image
-
+			File.delete(params[:path]) if File.exist?(params[:path])
+			redirect_to :action => "images"
 		end
 
 		private

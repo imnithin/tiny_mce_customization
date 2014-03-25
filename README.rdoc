@@ -16,8 +16,6 @@ Table border collapsed.
 
 Radio buttons are not supported in TinyMce. 
 
-Image Upload and usage using https://github.com/PerfectlyNormal/tinymce-rails-imageupload thanks a ton to PerfectlyNormal!
+1. Image Upload and usage using https://github.com/PerfectlyNormal/tinymce-rails-imageupload thanks a ton to PerfectlyNormal!
 
-Image upload and usage, that was implemented in Rails 2 project, using pop-up window works well on Chrome, has issues with firefox. I have used LMC-BUTTON http://www.lettersmarket.com/uploads/lettersmarket/lmcbutton/demo_lmcbutton.html thanks to the developer and from the blog http://www.whiletrue.it/how-to-implement-a-custom-file-manager-in-tinymce-4/
-
-(currently working on deletion of images)
+2. Image upload/deletion and usage, that was implemented in Rails 2 project, using pop-up window works well on Chrome, has issues with firefox. I have used LMC-BUTTON http://www.lettersmarket.com/uploads/lettersmarket/lmcbutton/demo_lmcbutton.html thanks to the developer and from the blog http://www.whiletrue.it/how-to-implement-a-custom-file-manager-in-tinymce-4/
