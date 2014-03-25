@@ -21,6 +21,11 @@ class EditorCustomizationsController < ApplicationController
 			end
 		end
 
+		def pdf
+			@description = params[:description]
+			render :pdf => "pdf"
+		end
+
 		def upload_image
 			if params[:file].present?
 				file = params[:file][:datafile]

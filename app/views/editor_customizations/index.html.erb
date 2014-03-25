@@ -61,7 +61,7 @@ tinymce.init({
 // toolbar : insertfile
 </script>
 
-<%#= form_tag save_editor_customizations_path do %>
+<%= form_tag pdf_editor_customizations_path do %>
 <%= text_area_tag :description, nil, :rows=>20 %>
-<%#= submit_tag "Submit" %>
-<%# end %>
+<%= submit_tag "Submit" %>
+<% end %>

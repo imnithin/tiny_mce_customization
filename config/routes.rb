@@ -8,7 +8,7 @@ TinyMceCustomization::Application.routes.draw do
   resources :editor_customizations do
     collection do
       get 'images'
-      get 'save'
+      post 'pdf'
       post 'upload_image'
     end
     member do

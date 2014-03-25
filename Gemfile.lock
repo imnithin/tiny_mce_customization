@@ -114,6 +114,9 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    wicked_pdf (0.9.10)
+      rails
+    wkhtmltopdf-binary (0.9.9.1)
 
 PLATFORMS
   ruby
@@ -130,3 +133,5 @@ DEPENDENCIES
   tinymce-rails-imageupload!
   turbolinks
   uglifier (>= 1.3.0)
+  wicked_pdf
+  wkhtmltopdf-binary

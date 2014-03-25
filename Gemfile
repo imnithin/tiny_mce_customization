@@ -45,3 +45,5 @@ end
 # gem 'debugger', group: [:development, :test]
 gem 'i18n'
 gem 'tinymce-rails-imageupload', github: 'PerfectlyNormal/tinymce-rails-imageupload'
+gem 'wkhtmltopdf-binary'
+gem 'wicked_pdf'
