@@ -14,7 +14,7 @@ development:
   database: tiny_mce_customization_development
   pool: 5
   username: root
-  password: rank123
+  password: 
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
