@@ -19,3 +19,5 @@ Radio buttons are not supported in TinyMce.
 1. Image Upload and usage using https://github.com/PerfectlyNormal/tinymce-rails-imageupload thanks a ton to PerfectlyNormal!
 
 2. Image upload/deletion and usage, that was implemented in Rails 2 project, using pop-up window works well on Chrome, has issues with firefox. I have used LMC-BUTTON http://www.lettersmarket.com/uploads/lettersmarket/lmcbutton/demo_lmcbutton.html thanks to the developer and from the blog http://www.whiletrue.it/how-to-implement-a-custom-file-manager-in-tinymce-4/
+
+'fullpage' plugin or document properties (a gear icon, first one in the tolbar menu) is customizable, it contains SEO information as of now, Just sneak into its plugin.js file, it's 'walk on the cake' changing the namings or adding few input items as well.

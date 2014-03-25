@@ -27,7 +27,7 @@ tinymce.init({
                               {text: 'Select', value: 'select' },
                             <% for category in @sexual_identities %>
                                 {text: '<%= category %>', value: '<%= category %>'},
-     						 <% end %>
+     						            <% end %>
 
                             ],
                             onPostRender: function() {
@@ -44,18 +44,24 @@ tinymce.init({
 	},
 
 	plugins: [
-	"hr uploadimage link image fullpage advlist autolink lists charmap print preview anchor",
-	"searchreplace visualblocks code fullscreen",
+	"media hr uploadimage link image fullpage advlist autolink lists charmap print preview anchor pagebreak",
+	"searchreplace visualblocks code fullscreen nonbreaking template",
 	"insertdatetime table contextmenu paste ",
 	"emoticons print textcolor"
 	],
-	toolbar: "uploadimage link image fullpage | undo redo | fontsizeselect | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | forecolor backcolor | menu_button "
+	toolbar: "fullpage uploadimage image link | undo redo | fontselect | fontsizeselect | styleselect | emoticons | bold italic | print preview media | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | forecolor backcolor | menu_button ",
+   image_advtab: true,
+    templates: [
+        {title: 'Template 1', content: 'Content 1'},
+        {title: 'Template 2', content: 'Content 2'}
+    ]
+
 });
-//plugins : media image moxiemanager
-// toolbar : insertfile image
+//plugins : moxiemanager
+// toolbar : insertfile
 </script>
 
-<%= form_tag save_editor_customizations_path do %>
-<%= text_area_tag :description %>
+<%#= form_tag save_editor_customizations_path do %>
+<%= text_area_tag :description, nil, :rows=>20 %>
 <%#= submit_tag "Submit" %>
-<% end %>
+<%# end %>
