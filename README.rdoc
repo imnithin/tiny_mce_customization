@@ -23,3 +23,5 @@ Radio buttons are not supported in TinyMce.
 'fullpage' plugin or document properties (a gear icon, first one in the tolbar menu) is customizable, it contains SEO information as of now, Just sneak into its plugin.js file, it's 'walk on the cake' changing the namings or adding few input items as well.
 
 Finally can see the it in pdf https://github.com/mileszs/wicked_pdf thanks to unixmonkey ;)
+
+Editor data to pdf will have issues for ex, table in editor doesn't appear in pdf because of border attribute that is missing.
