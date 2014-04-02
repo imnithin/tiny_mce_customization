@@ -1,3 +1,7 @@
+updated 2nd April 2014: 
+
+db is not necessary. 
+
 Had started to blog initially http://imnithin.weebly.com/ and now getting them on Git.
 
 Please feel free to pull and customize tinymce editor version 4, on Rails 4.
