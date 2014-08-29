@@ -32,6 +32,10 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'execjs'
+gem 'libv8', '~> 3.11.8'
+gem "therubyracer", '>= 0.11.0beta1', :require => 'v8'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
