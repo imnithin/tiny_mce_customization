@@ -36,6 +36,15 @@ gem 'execjs'
 gem 'libv8', '~> 3.11.8'
 gem "therubyracer", '>= 0.11.0beta1', :require => 'v8'
 
+group :test, :development do
+  gem 'better_errors'
+  gem 'debugger'
+  gem 'binding_of_caller'
+  gem 'meta_request'
+  gem 'switch_user'
+  gem 'quiet_assets'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

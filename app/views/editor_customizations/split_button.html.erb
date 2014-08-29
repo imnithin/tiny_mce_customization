@@ -1,0 +1,49 @@
+<script type="text/javascript" src="/tinymce/tinymce.js"></script>
+<script type="text/javascript">
+tinymce.init({
+  selector: "textarea",
+  fontsize_formats: "6pt 7pt 8pt 9pt 10pt 11pt 12pt 26pt 36pt",
+  setup: function(editor) {
+    editor.addButton('demo_button', {
+            title: 'Demo Button',
+            type: 'splitbutton',
+            onclick: function() {
+
+            },
+            menu: [
+                {
+                    text : 'Some Regular Button', onclick : function() {
+                  alert('hi')
+
+                    }
+                },
+                {
+
+                    //How to add some custom html for combo box here for example?
+                }
+            ]
+        });
+  },
+
+  plugins: [
+  "media hr uploadimage link image fullpage advlist autolink lists charmap print preview anchor pagebreak",
+  "searchreplace visualblocks code fullscreen nonbreaking template",
+  "insertdatetime table contextmenu paste ",
+  "emoticons print textcolor"
+  ],
+  toolbar: "fullpage uploadimage image link | undo redo | fontselect | fontsizeselect | styleselect | emoticons | bold italic | print preview media | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | forecolor backcolor | demo_button ",
+   image_advtab: true,
+    templates: [
+        {title: 'Template 1', content: 'Content 1'},
+        {title: 'Template 2', content: 'Content 2'}
+    ]
+
+});
+//plugins : moxiemanager
+// toolbar : insertfile
+</script>
+
+<%= form_tag pdf_editor_customizations_path do %>
+<%= text_area_tag :description, nil, :rows=>20 %>
+<%= submit_tag "Submit" %>
+<% end %>

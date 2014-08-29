@@ -18,10 +18,10 @@ tinymce.init({
                         height : 70,
                         body: [
                           {type: 'listbox',
-                            
+
                             label: 'Select :',
                             onselect: function(e) {
-   // write a remote function and save the value in session 
+   // write a remote function and save the value in object
                             },
                             values: [
                               {text: 'Select', value: 'select' },
@@ -31,10 +31,10 @@ tinymce.init({
 
                             ],
                             onPostRender: function() {
-                              // Select the item    						
+                              // Select the item
                               this.value('<%=@sexual_identities.first%>');
                             }
-                           
+
                           }
                         ]
                       });
