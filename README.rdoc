@@ -29,3 +29,5 @@ Radio buttons are not supported in TinyMce.
 Finally can see the it in pdf https://github.com/mileszs/wicked_pdf thanks to unixmonkey ;)
 
 Editor data to pdf will have issues for ex, table in editor doesn't appear in pdf because of border attribute that is missing.
+
+
